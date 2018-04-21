@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <title>Treap Project</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/993E81BC-3FB5-9A41-AD14-5E29C5E22D25/main.js" charset="UTF-8"></script><script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="util.js"></script>
+		<script src="aTreap.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body onload="init();">
+    <div id="title">
+		Honours Project Treap
+    </div>
+    
+    <!-- Navigation -->
+    <div id="navi">
+        <!-- chooses max or min -->
+        <div style="background-color: #999;">
+					Make random treap:
+           <br /><input id="textSize" type="text" /> size
+					 <br /> <input id="butRnd" type="button" value="make" onclick="makeTreap();" />        
+					</div>
+				<!-- Random -->
+				<div style="background-color: #999;">
+            <input id="textInsertV" type="text"  /> value            <br />
+            <input id="textInsertP" type="text"  /> priority            <br />
+            <input id="butInsertNode" type="button" value="insert node" onclick="insertNode();" />
+        </div>
+        <!-- change D, Insert -->
+        <div style="background-color: #999;">
+						Add to the treap:<br />
+            <input id="textInsert" type="text" />
+            <input id="butInsert" type="button" value="insert" onclick="doInsert();" />
+					</div>
+        <!-- remove node from treap -->
+				<div style="background-color: #999;">
+						Remove from the treap:<br />
+						<input id="textRemove" type="text" />
+            <input id="butRemove" type="button" value="remove" onclick="doRemove();" />        
+					</div>
+        
+    </div>
+
+		<div>
+        <svg id="svg" width="800" height="450">
+            <g transform="translate(20,20)"></g>
+        </svg>
+    </div>
+		
+		<div style="background-color: #999;">speed controller - slow
+			<input id="speedSlider" type="range" min="-71" max="0" step="1" onchange="changeVal()"/> fast -
+		</div>
+		<div style="background-color: #999;">
+      Instructions: <br />
+			Selecting the make random treap option will generate a random treap of the selected size. <br />
+			By selecting a "value" and a "priority" you can insert a node with a selected value and priority.<br />
+			The add to treap options allows you to add a value with a random priority.<br />
+			The remove button removes the element with the selected value. 
+    </div>
+  </body>
+</html>
